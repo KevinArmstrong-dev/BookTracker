@@ -20,7 +20,7 @@ jobs:
     - name: Install dependencies
       run: dotnet build Booktracker/BookTracker.sln
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build BookTracker/BookTracker/BookTracker.csproj --configuration Release --no-restore
     
   unittests:
     needs: build
@@ -32,7 +32,7 @@ jobs:
     - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
       uses: actions/setup-dotnet@v1.7.2
       with:
-        dotnet-version: ${{ matrix.dotnet-version }}
+        dotnet-version: '6.0.x'
     - name: Install dependencies
       run: dotnet restore
     - name: Unit Tests
