@@ -17,9 +17,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: Restore dependencies
+    - name: Restore App
       run: dotnet build BookTracker/BookTracker.sln
-    - name: Build
-      run: dotnet build BookTracker/BookTracker/BookTracker.csproj --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+    - name: Build App
+      run: dotnet build BookTracker/BookTracker/BookTracker.sln --configuration Release --no-restore
+    - name: Test App
+      run: dotnet test BookTracker\BookTracker\BookTrackerTest\BookTrackerTest.csproj --no-build --verbosity normal
