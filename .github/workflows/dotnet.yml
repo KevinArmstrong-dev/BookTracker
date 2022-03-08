@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore BookTracker/BookTracker.sln
+      run: dotnet restore
     - name: Build
       run: dotnet build BookTracker/BookTracker/BookTracker.csproj --configuration Release --no-restore
     - name: Test
