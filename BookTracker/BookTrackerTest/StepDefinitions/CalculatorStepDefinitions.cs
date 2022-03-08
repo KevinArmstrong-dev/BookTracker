@@ -8,6 +8,7 @@ namespace BookTrackerTest.StepDefinitions
     {
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
         IWebDriver webDriver = new ChromeDriver();
+        
         int number1 = 0;
 
         [Given("the first number is (.*)")]
@@ -27,7 +28,7 @@ namespace BookTrackerTest.StepDefinitions
         public void GivenTheSecondNumberIs(int number)
         {
             //TODO: implement arrange (precondition) logic
-
+      
             webDriver.Navigate().GoToUrl("http://google.com");
             var n = number;
         }
