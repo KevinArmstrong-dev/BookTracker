@@ -1,4 +1,4 @@
-name: BookTrackerDeploy
+name: BookTracker
 
 on:
   push:
