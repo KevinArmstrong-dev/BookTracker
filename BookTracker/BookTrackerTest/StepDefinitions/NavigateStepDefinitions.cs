@@ -13,7 +13,7 @@ namespace BookTrackerTest.StepDefinitions
         [Given(@"the link to go to")]
         public void GivenTheLinkToGoTo()
         {
-            visit = "http://google.com";
+            visit = "https://localhost:5001/";
         }
 
         [Then(@"Navigate to the page")]
