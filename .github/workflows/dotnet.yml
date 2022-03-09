@@ -34,7 +34,7 @@ jobs:
       with:
         dotnet-version: '6.0.x'
     - name: Install dependencies
-      run: dotnet build Booktracker/BookTracker.sln
+      run: dotnet build Booktracker/BookTracker.sln --configuration Release
     - name: Unit Tests
       run: dotnet test BookTracker/BookTrackerTest/BookTrackerTest.csproj --configuration Release --no-restore
       
